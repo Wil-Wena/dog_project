@@ -62,7 +62,7 @@ class StarRating extends StatelessWidget {
       children: List.generate(
           value,
           (_) => Padding(
-                padding: EdgeInsets.all(3.0),
+                padding: const EdgeInsets.all(3.0),
                 child: Star(
                   color: color,
                   size: starSize,

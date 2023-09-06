@@ -1,5 +1,8 @@
-import 'package:dog_project/flex_screen.dart';
-import 'package:dog_project/profile_screen.dart';
+import 'package:dog_project/deep_tree.dart';
+import 'package:dog_project/e_commerce_screen_after.dart';
+import 'package:dog_project/e_commerce_screen_before.dart';
+// import 'package:dog_project/flex_screen.dart';
+// import 'package:dog_project/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,10 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        brightness: Brightness.dark,
+        primaryColor: Colors.green,
         useMaterial3: true,
       ),
-      home: ProfileScreen(),
+      home: ECommerceScreen2(),
     );
   }
 }
