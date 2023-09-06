@@ -1,8 +1,4 @@
-import 'package:dog_project/deep_tree.dart';
 import 'package:dog_project/e_commerce_screen_after.dart';
-import 'package:dog_project/e_commerce_screen_before.dart';
-// import 'package:dog_project/flex_screen.dart';
-// import 'package:dog_project/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,19 +6,22 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         primaryColor: Colors.green,
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(fontFamily: 'LeckerliOne', fontSize: 24),
+          elevation: 40,
+        ),
       ),
-      home: ECommerceScreen2(),
+      home: ECommerceScreenAfter(),
     );
   }
 }

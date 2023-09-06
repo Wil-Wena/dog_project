@@ -8,7 +8,7 @@ class ECommerceScreenAfter extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          children: <Widget>[
+          children: [
             _buildToggleBar(context),
             Image.asset('assets/woman_shopping.jpg'),
             const DealButtons(),
@@ -37,7 +37,7 @@ class ECommerceScreenAfter extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Lorem Ipsum',
+                    'Textile Stuff',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const Text(
@@ -85,6 +85,7 @@ class ECommerceScreenAfter extends StatelessWidget {
 
   AppBar _buildAppBar() {
     return AppBar(
+      backgroundColor: Colors.green,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(30),
@@ -92,13 +93,16 @@ class ECommerceScreenAfter extends StatelessWidget {
       ),
       leading: const Padding(
         padding: EdgeInsets.all(20.0),
-        child: Icon(Icons.home),
+        child: Icon(
+          Icons.home,
+          color: Colors.white,
+        ),
       ),
-      title: const Text('Let\'s go shopping!'),
+      title: const Center(child: Text("Let's go shopping!")),
       actions: const [
         Padding(
           padding: EdgeInsets.all(20.0),
-          child: Icon(Icons.shopping_cart),
+          child: Icon(Icons.shopping_cart, color: Colors.white),
         )
       ],
     );
