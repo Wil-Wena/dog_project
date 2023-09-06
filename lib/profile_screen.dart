@@ -1,3 +1,4 @@
+import 'package:dog_project/star.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Image.asset('assets/walk.jpg'),
             Transform.translate(
-              offset: Offset(0, 100),
+              offset: const Offset(0, 100),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: Column(
@@ -45,14 +46,15 @@ Widget _buildProfileImage(BuildContext context) {
 
 Widget _buildProfileDetails(BuildContext context) {
   return Padding(
-    padding: EdgeInsets.all(20.0),
+    padding: const EdgeInsets.all(20.0),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           "Teddy American",
           style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
         ),
+        StarRating(value: 5),
         _buildDetailsRow('Age', '4'),
         _buildDetailsRow('Status', 'Good Boy')
       ],
@@ -65,7 +67,7 @@ Widget _buildDetailsRow(String heading, String value) {
     children: [
       Text(
         '$heading: ',
-        style: TextStyle(fontWeight: FontWeight.bold),
+        style: const TextStyle(fontWeight: FontWeight.bold),
       ),
       Text(value)
     ],
@@ -74,7 +76,7 @@ Widget _buildDetailsRow(String heading, String value) {
 
 Widget _buildIcon(IconData icon, String text) {
   return Padding(
-    padding: EdgeInsets.all(20),
+    padding: const EdgeInsets.all(20),
     child: Column(children: [
       Icon(
         icon,

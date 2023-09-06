@@ -24,7 +24,7 @@ class FlexScreen extends StatelessWidget {
             _buildExpanded(context),
             ..._header(context, 'Flexible'),
             _buildFlexible(context),
-            Expanded(child: Container()),
+            Spacer(),
             _buildFooter(context)
           ],
         ),
@@ -68,9 +68,9 @@ class FlexScreen extends StatelessWidget {
     return const SizedBox(
       height: 100,
       child: Row(children: [
-        FlexibleLabel(flex: 1, flexColor: Colors.orange, textSize: '25%'),
-        FlexibleLabel(flex: 1, flexColor: Colors.deepOrange, textSize: '25%'),
-        FlexibleLabel(flex: 2, flexColor: Colors.blue, textSize: '50%')
+        FlexibleLabel(flex: 2, flexColor: Colors.orange, textSize: '25%'),
+        FlexibleLabel(flex: 2, flexColor: Colors.deepOrange, textSize: '25%'),
+        FlexibleLabel(flex: 3, flexColor: Colors.blue, textSize: '50%')
       ]),
     );
   }
