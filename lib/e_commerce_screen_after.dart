@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ECommerceScreen2 extends StatelessWidget {
+class ECommerceScreenAfter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,8 +95,8 @@ class ECommerceScreen2 extends StatelessWidget {
         child: Icon(Icons.home),
       ),
       title: const Text('Let\'s go shopping!'),
-      actions: <Widget>[
-        const Padding(
+      actions: const [
+        Padding(
           padding: EdgeInsets.all(20.0),
           child: Icon(Icons.shopping_cart),
         )
