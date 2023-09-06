@@ -7,18 +7,27 @@ class FlexScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flexible and Expanded'),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ..._header(context, 'Expanded'),
-          _buildExpanded(context),
-          ..._header(context, 'Flexible'),
-          _buildFlexible(context),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: const Center(
+              child: Text(
+            'Flexible and Expanded',
+            style: TextStyle(color: Colors.white),
+          )),
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ..._header(context, 'Expanded'),
+            _buildExpanded(context),
+            ..._header(context, 'Flexible'),
+            _buildFlexible(context),
+            Expanded(child: Container()),
+            _buildFooter(context)
+          ],
+        ),
       ),
     );
   }
@@ -67,6 +76,23 @@ class FlexScreen extends StatelessWidget {
   }
 
   Widget _buildFooter(BuildContext context) {
-    return Container();
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          borderRadius: BorderRadius.circular(40),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 15.0,
+            horizontal: 30,
+          ),
+          child: Text(
+            'Planned to the Bottom',
+            style: Theme.of(context).textTheme.labelSmall,
+          ),
+        ),
+      ),
+    );
   }
 }
